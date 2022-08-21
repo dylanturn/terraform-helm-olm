@@ -1,0 +1,15 @@
+apiVersion: v2
+type: application
+name: Operator-Lifecycle-Manager
+description: A chart for deploying the operator-lifecycle-manager
+icon: https://olm.operatorframework.io/images/logo.svg
+version: 0.22.0
+appVersion: 'v0.22.0'
+kubeVersion: '>= v1.14.0'
+keywords:
+  - olm
+  - operatorhub
+  - operator-lifecycle-manager
+maintainers:
+  - name: Dylan Turnbull
+    email: dylanturn@gmail.com
