@@ -23,8 +23,8 @@ variable "helm" {
       repository = null
     }
     operator_subscription = {
-      name       = "operator-lifecycle-manager"
-      chart      = "./charts/operator-subscription"
+      name       = "operator-subscription"
+      chart      = "./charts/operator-subscriptions"
       version    = "0.0.1"
       repository = null
     }
@@ -44,39 +44,18 @@ variable "namespaces" {
 }
 
 # The attributes of this object will become optional with inline defaults once Terraform 1.3.0 is released.
-variable "operator_subscription_groups" {
+variable "operator_subscriptions" {
   type = list(object({
-    group_name = string
-    group_namespace = string
-    group_upgrade_strategy = string
-    group_subscriptions = list(object({
-      name = string
-      operator = string
-      channel = string
-      source = string
-      starting_service_version = string
-      automatic_install_approval = bool
-      config = any
-    }))
+    name                       = string
+    operator                   = string
+    channel                    = string
+    source                     = string
+    starting_service_version   = string
+    automatic_install_approval = bool
+    config                     = any
   }))
   description = <<EOT
   PUT DESCRIPTION HERE
   EOT
-  default = []
-}
-
-# The attributes of this object will become optional with inline defaults once Terraform 1.3.0 is released.
-variable "operator_subscriptions" {
-  type = list(object({
-    name = string
-    namespace = string
-    operator = string
-    channel = string
-    source = string
-    starting_service_version = string
-    automatic_install_approval = bool
-    config = any
-  }))
-  description = "A map of {operator_group => subscription_config}"
-  default = {}
+  default     = []
 }

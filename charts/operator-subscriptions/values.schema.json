@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "required": [
+    
+  ],
+  "properties": {
+    "subscriptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?"
+          },
+          "channel": {
+            "type": "string",
+            "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?"
+          },
+          "olm_namespace": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string",
+            "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?"
+          },
+          "source": {
+            "type": "string",
+            "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?"
+          },
+          "install_plan_approval": {
+            "type": "string",
+            "enum": [
+              "Automatic",
+              "Manual"
+            ]
+          },
+          "starting_csv": {
+            "type": "string"
+          },
+          "config": {
+            "type": [
+              "object",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

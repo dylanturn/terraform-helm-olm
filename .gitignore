@@ -1,6 +1,7 @@
 .idea
 .terraform
 .terraform.lock.hcl
+local-workspace.tf
 
 # Local .terraform directories
 **/.terraform/*

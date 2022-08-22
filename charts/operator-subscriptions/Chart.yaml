@@ -1,7 +1,7 @@
 apiVersion: v2
 type: application
-name: Operator-Subscription-Group
-description: A chart for deploying a group of operator-lifecycle-manager managed operators
+name: Operator-Subscriptions
+description: A chart for deploying an operator-lifecycle-manager managed operator
 icon: https://olm.operatorframework.io/images/logo.svg
 version: 0.0.1
 appVersion: 'v0.0.1'
