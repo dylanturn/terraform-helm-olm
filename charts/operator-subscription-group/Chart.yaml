@@ -1,0 +1,16 @@
+apiVersion: v2
+type: application
+name: Operator-Subscription-Group
+description: A chart for deploying a group of operator-lifecycle-manager managed operators
+icon: https://olm.operatorframework.io/images/logo.svg
+version: 0.0.1
+appVersion: 'v0.0.1'
+kubeVersion: '>= v1.14.0'
+keywords:
+  - olm
+  - operatorhub
+  - operator-lifecycle-manager
+  - operator
+maintainers:
+  - name: Dylan Turnbull
+    email: dylanturn@gmail.com
